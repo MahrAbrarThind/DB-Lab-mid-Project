@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5FC08A1-CF41-4937-8C3D-C3EA3D676585}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DBMidProject</RootNamespace>
+    <AssemblyName>DBMidProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\classAttendence.cs" />
+    <Compile Include="BL\studentAttendence.cs" />
+    <Compile Include="BL\StudentBL.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="DL\studentAttendenceDL.cs" />
+    <Compile Include="DL\StudentDL.cs" />
+    <Compile Include="MenuPanels\Attendence Panels\studentAttendencePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuPanels\Attendence Panels\studentAttendencePanel.Designer.cs">
+      <DependentUpon>studentAttendencePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPanels\Student Panels\deleteStudentsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuPanels\Student Panels\deleteStudentsPanel.Designer.cs">
+      <DependentUpon>deleteStudentsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Panels\mainUserControlMenuPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form Panels\mainUserControlMenuPanel.Designer.cs">
+      <DependentUpon>mainUserControlMenuPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPanels\assessmentsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuPanels\assessmentsPanel.Designer.cs">
+      <DependentUpon>assessmentsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPanels\CLOsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuPanels\CLOsPanel.Designer.cs">
+      <DependentUpon>CLOsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Panels\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Panels\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPanels\Student Panels\updateStudentsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuPanels\Student Panels\updateStudentsPanel.Designer.cs">
+      <DependentUpon>updateStudentsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Panels\userControlHomePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form Panels\userControlHomePanel.Designer.cs">
+      <DependentUpon>userControlHomePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPanels\Student Panels\viewStudentsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuPanels\Student Panels\viewStudentsPanel.Designer.cs">
+      <DependentUpon>viewStudentsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MenuPanels\rubricsLevelPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuPanels\rubricsLevelPanel.Designer.cs">
+      <DependentUpon>rubricsLevelPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPanels\rubricsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuPanels\rubricsPanel.Designer.cs">
+      <DependentUpon>rubricsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPanels\Student Panels\AddstudentsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuPanels\Student Panels\AddstudentsPanel.Designer.cs">
+      <DependentUpon>AddstudentsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPanels\Student Panels\StudentMenuPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuPanels\Student Panels\StudentMenuPanel.Designer.cs">
+      <DependentUpon>StudentMenuPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidationsClass.cs" />
+    <EmbeddedResource Include="Form Panels\mainUserControlMenuPanel.resx">
+      <DependentUpon>mainUserControlMenuPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPanels\assessmentsPanel.resx">
+      <DependentUpon>assessmentsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPanels\Attendence Panels\studentAttendencePanel.resx">
+      <DependentUpon>studentAttendencePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPanels\CLOsPanel.resx">
+      <DependentUpon>CLOsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Panels\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPanels\Student Panels\deleteStudentsPanel.resx">
+      <DependentUpon>deleteStudentsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPanels\Student Panels\StudentMenuPanel.resx">
+      <DependentUpon>StudentMenuPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPanels\Student Panels\updateStudentsPanel.resx">
+      <DependentUpon>updateStudentsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Panels\userControlHomePanel.resx">
+      <DependentUpon>userControlHomePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPanels\Student Panels\viewStudentsPanel.resx">
+      <DependentUpon>viewStudentsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MenuPanels\rubricsLevelPanel.resx">
+      <DependentUpon>rubricsLevelPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPanels\rubricsPanel.resx">
+      <DependentUpon>rubricsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPanels\Student Panels\AddstudentsPanel.resx">
+      <DependentUpon>AddstudentsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
